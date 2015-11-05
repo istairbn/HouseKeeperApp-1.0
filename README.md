@@ -4,8 +4,6 @@ A Logscape App that monitors directories and deletes specified files that reach 
 ###########################################################################################################
 #  HouseKeeperApp-1.0
 #  Creator: Ben Newton
-#  Contact: ben.newton@excelian.com
-#
 ###########################################################################################################
 
 This is a Housekeeping app designed to interact with Logscape. It will monitor the files on the system and remove them when they reach a certain age. 
@@ -38,18 +36,18 @@ In this example, the TESTNICK directory and all subdirectories will be cleaned o
 Using this with Logscape, you will need to check the HouseKeeperApp-1.0.bunle file, which tells Logscape which hosts to run. Here is an example of a bundle you might wish to use:
 
 <Bundle name="HouseKeeperApp" version="1.0" system="false">
-  <status>UNINSTALLED</status>
-  <owner>ben.newton@excelian.com</owner>
-  <services>
-    <Service>
-    <name>HouseKeeper</name>
-  	<resourceSelection>type containsAny WINDOWS</resourceSelection>
-    <fork>true</fork>
-    <background>true</background>
-  	<instanceCount>-1</instanceCount>
-  	<pauseSeconds>600</pauseSeconds>
-    <script>HouseKeeper.groovy config.properties</script>
-	</Service>  
+	<status>UNINSTALLED</status>
+	<owner>support@logscape.com</owner>
+	<services>
+		<Service>
+			<name>HouseKeeper</name>
+			<resourceSelection>type containsAny WINDOWS</resourceSelection>
+		    	<fork>true</fork>
+		    	<background>true</background>
+		  	<instanceCount>-1</instanceCount>
+		  	<pauseSeconds>600</pauseSeconds>
+			<script>HouseKeeper.groovy config.properties</script>
+		</Service>  
 	</services>
 </Bundle>
 
