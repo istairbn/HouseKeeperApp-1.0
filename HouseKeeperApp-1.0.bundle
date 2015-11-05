@@ -1,15 +1,15 @@
 <Bundle name="HouseKeeperApp" version="1.0" system="false">
   <status>UNINSTALLED</status>
-  <owner>ben.newton@excelian.com</owner>
+  <owner>support@logscape.com</owner>
   <services>
-    <Service>
-    <name>FileScanner</name>
+	<Service>
+	<name>FileScanner</name>
   	<resourceSelection>type containsAny hpc</resourceSelection>
-    <fork>true</fork>
-    <background>true</background>
+	<fork>true</fork>
+	<background>true</background>
   	<instanceCount>-1</instanceCount>
   	<pauseSeconds>600</pauseSeconds>
-    <script>HouseKeeper.groovy config.properties</script>
+	<script>HouseKeeper.groovy config.properties</script>
 	</Service>  
-	</services>
+  </services>
 </Bundle>
