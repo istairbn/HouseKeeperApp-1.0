@@ -34,7 +34,7 @@ recursion={ "TESTNICK:"true"}
 In this example, the TESTNICK directory and all subdirectories will be cleaned of any file labelled .hprof that goes 60 minuts without being modified. However, the TESTNICK2 directory will be cleaned of all filenames including a . once they go 24 hours without being modified. the folder TESTNICK2/SAFE however would remain untouched.   
 
 Using this with Logscape, you will need to check the HouseKeeperApp-1.0.bunle file, which tells Logscape which hosts to run. Here is an example of a bundle you might wish to use:
-
+<code>
 <Bundle name="HouseKeeperApp" version="1.0" system="false">
 	<status>UNINSTALLED</status>
 	<owner>support@logscape.com</owner>
@@ -50,7 +50,7 @@ Using this with Logscape, you will need to check the HouseKeeperApp-1.0.bunle fi
 		</Service>  
 	</services>
 </Bundle>
-
+</code>
 You'll notice that you must specify which .properties file is to be used for each instance but you don't need to inform it that it will be in the lib folder. 
 
 Fields.config is simply a Logscape config file, which will capture the logging and allow you to monitor which files have been removed on Logscape. 
