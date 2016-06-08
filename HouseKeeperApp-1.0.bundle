@@ -3,8 +3,8 @@
 	<owner>ben.newton@excelian.com</owner>
 	<services>
 		<Service>
-			<name>TempDataCleaner</name>
-			<resourceSelection>osName containsAny WINDOWS</resourceSelection>
+			<name>HPC_CommonData</name>
+			<resourceSelection>type containsAny hpc,grid</resourceSelection>
 			<fork>false</fork>
 			<background>true</background>
 			<instanceCount>-1</instanceCount>
@@ -19,6 +19,6 @@
 			<instanceCount>-1</instanceCount>
 			<pauseSeconds>10080</pauseSeconds>
 			<script>HouseKeeper.groovy hprof.properties</script>
-    		</Service>       
+    	</Service>       
 	</services>
 </Bundle>
