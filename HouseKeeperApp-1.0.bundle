@@ -1,15 +1,24 @@
 <Bundle name="HouseKeeperApp" version="1.0" system="false">
-  <status>UNINSTALLED</status>
-  <owner>support@logscape.com</owner>
-  <services>
-	<Service>
-	<name>FileScanner</name>
-  	<resourceSelection>type containsAny hpc</resourceSelection>
-	<fork>true</fork>
-	<background>true</background>
-  	<instanceCount>-1</instanceCount>
-  	<pauseSeconds>600</pauseSeconds>
-	<script>HouseKeeper.groovy config.properties</script>
-	</Service>  
-  </services>
+	<status>UNINSTALLED</status>
+	<owner>ben.newton@excelian.com</owner>
+	<services>
+		<Service>
+			<name>TempDataCleaner</name>
+			<resourceSelection>osName containsAny WINDOWS</resourceSelection>
+			<fork>false</fork>
+			<background>true</background>
+			<instanceCount>-1</instanceCount>
+			<pauseSeconds>10080</pauseSeconds>
+			<script>powerShellRunner.groovy UserAppDataCleaner.ps1</script>
+		</Service>
+		<Service>
+			<name>Logscape_Hprof</name>
+			<resourceSelection>id = 0</resourceSelection>
+			<fork>true</fork>
+			<background>true</background>
+			<instanceCount>-1</instanceCount>
+			<pauseSeconds>10080</pauseSeconds>
+			<script>HouseKeeper.groovy hprof.properties</script>
+    		</Service>       
+	</services>
 </Bundle>
